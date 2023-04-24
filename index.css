@@ -1,8 +1,84 @@
 body {
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;                            
 }
 
 .container {
+    margin: 20px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    width: 575px;
+    height: 600px;
+    background-color: #1B244A;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid white;
+    height: 420px;
+    width: 210px;
+    margin: 30px -2px;
+    padding: 0 20px;
+    
+}
+
+.team {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-shadow: 0 0 3px black;
+    
+}
+
+.score {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: 90px;
+    color: #F94F6D;
+    height: 94px;
+    width: 155;
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 0 40px 0;
+    border-radius: 5px;
+    
+}
+
+button {
+    color: #9AABD8;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    border: 1px solid #9AABD8;
+    background-color: #1B244A;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px black;
+}
+
+button:hover {
+    background-color: #111735;
+}
+
+button:active {
+    background-color: #263163;
+}
+
+.score-btn {
+    width: 45px;
+    height: 45px;
+    
+    
+}
+
+.undo-btn  {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    margin: 40px auto;
+    height: 60px;
+    width: 110px;
+    padding: 10px 12px;
+    text-align: left;
+
+ 
+
 }
