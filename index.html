@@ -1,0 +1,29 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h3>HOME</h3>
+                <p class="score" id="home-score">0</p>
+                <button class="score-btn" id="home-btn-1" onclick="add1Home()">+1</button>
+                <button class="score-btn" id="home-btn-2" onclick="add2Home()">+2</button>
+                <button class="score-btn" id="home-btn-3" onclick="add3Home()">+3</button>
+                <button onclick="undoHome()">Undo last entry: <span id="last-home"></span></button>
+            </div>
+            <div>
+                <h3>GUEST</h3>
+                <p class="score" id="guest-score">0</p>
+                <button class="score-btn" id="guest-btn-1" onclick="add1Guest()">+1</button>
+                <button class="score-btn" id="guest-btn-2" onclick="add2Guest()">+2</button>
+                <button class="score-btn" id="guest-btn-3" onclick="add3Guest()">+3</button>
+                <button onclick="undoGuest()">Undo last entry: <span id="last-guest"></span></button>
+            </div>
+        </div>
+        <div>
+            <button id="clear-btn" onclick="clearAll()">CLEAR ALL</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
