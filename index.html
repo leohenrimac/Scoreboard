@@ -7,31 +7,53 @@
     </head>
     <body>
         <div class="container">
-            <div class="score-card">
-                <h3 class="team">HOME</h3>
-                <p class="score" id="home-score">0</p>
-                <div>
-                    <button class="score-btn" id="home-btn-1" onclick="add1Home()">+1</button>
-                    <button class="score-btn" id="home-btn-2" onclick="add2Home()">+2</button>
-                    <button class="score-btn" id="home-btn-3" onclick="add3Home()">+3</button>
+            <div class="score-board">
+                <div class="score-card">
+                    <h3 class="team">HOME</h3>
+                    <p class="score" id="home-score">0</p>
+                    <div>
+                        <button class="score-btn" id="home-btn-1" onclick="add1Home()">+1</button>
+                        <button class="score-btn" id="home-btn-2" onclick="add2Home()">+2</button>
+                        <button class="score-btn" id="home-btn-3" onclick="add3Home()">+3</button>
+                    </div>
+                    
+                    <button class="undo-btn" onclick="undoHome()">Undo last entry (<span id="last-home"></span>)</button>
                 </div>
-                
-                <button class="undo-btn" onclick="undoHome()">Undo last entry (<span id="last-home"></span>)</button>
+                <div class="score-card">
+                    <h3 class="team">GUEST</h3>
+                    <p class="score" id="guest-score">0</p>
+                    <div>
+                        <button class="score-btn" id="guest-btn-1" onclick="add1Guest()">+1</button>
+                        <button class="score-btn" id="guest-btn-2" onclick="add2Guest()">+2</button>
+                        <button class="score-btn" id="guest-btn-3" onclick="add3Guest()">+3</button>
+                    </div>
+                    <button class="undo-btn" onclick="undoGuest()">Undo last entry (<span id="last-guest"></span>)</button>
+                </div>
             </div>
-            <div class="score-card">
-                <h3 class="team">GUEST</h3>
-                <p class="score" id="guest-score">0</p>
+            <div id="score-controls">
                 <div>
-                    <button class="score-btn" id="guest-btn-1" onclick="add1Guest()">+1</button>
-                    <button class="score-btn" id="guest-btn-2" onclick="add2Guest()">+2</button>
-                    <button class="score-btn" id="guest-btn-3" onclick="add3Guest()">+3</button>
+                    <button class="control-btn" onclick="clearAll()">CLEAR ALL</button>
                 </div>
-                <button class="undo-btn" onclick="undoGuest()">Undo last entry (<span id="last-guest"></span>)</button>
+                <div>
+                    <button class="control-btn" onclick="finishGame()">FINISH GAME</button>
+                </div>
+            </div>
+            <div id="score-history">
+                <div>
+                    <h1 class="team">HISTORY</h1>
+                </div>
+                <div>
+                    <span class="team">HOME</span>
+                    <span id="score-game-home">0</span> X <span id="score-game-guest">0</span>
+                    <span class="team">GUEST</span>
+                </div>
+                <div>
+                    <button class="history-btn" onclick="clearAll()">CLEAR ALL</button>
+                </div>
             </div>
         </div>
-        <div>
-            <button id="clear-btn" onclick="clearAll()">CLEAR ALL</button>
-        </div>
+
+        
         <script src="index.js"></script>
     </body>
 </html>
