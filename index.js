@@ -84,7 +84,6 @@ function clearAll() {
 
 function finishGame() {
     if(scoreHome > scoreGuest) {
-        window.alert("HOME WINS!");
         scoreGameHome += 1;
         document.getElementById("score-game-home").textContent = scoreGameHome;
         clearAll();
@@ -93,10 +92,8 @@ function finishGame() {
         scoreGameGuest += 1;
         document.getElementById("score-game-guest").textContent = scoreGameGuest;
         clearAll();
-        window.alert("GUEST WINS!");
     }
     else {
-        window.alert("It is a tie!");
         clearAll();
     }
 }
