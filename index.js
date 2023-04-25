@@ -12,8 +12,6 @@ function add1Home() {
     document.getElementById("home-score").textContent = scoreHome;
     historyHome.push(1);
     document.getElementById("last-home").textContent = historyHome[historyHome.length - 1];
-    
-    
 }
 
 function add2Home() {
@@ -58,7 +56,7 @@ function undoHome() {
         document.getElementById("home-score").textContent = scoreHome;
         document.getElementById("last-home").textContent = historyHome[historyHome.length - 1];
     } else {
-        return 0
+        return 0;
     }
 }
 
@@ -69,9 +67,8 @@ function undoGuest() {
         document.getElementById("guest-score").textContent = scoreGuest;
         document.getElementById("last-guest").textContent = historyGuest[historyGuest.length - 1];
     } else {
-        return 0
+        return 0;
     }
-    
 }
 
 function clearAll() {
@@ -81,27 +78,32 @@ function clearAll() {
     document.getElementById("guest-score").textContent = scoreGuest;
     historyHome = [];
     historyGuest = [];
-    document.getElementById("last-home").textContent = historyHome[historyHome.length - 1]
-    document.getElementById("last-guest").textContent = historyGuest[historyGuest.length - 1]
-    
+    document.getElementById("last-home").textContent = historyHome[historyHome.length - 1];
+    document.getElementById("last-guest").textContent = historyGuest[historyGuest.length - 1];
 }
 
 function finishGame() {
     if(scoreHome > scoreGuest) {
-        window.alert("HOME WINS!")
+        window.alert("HOME WINS!");
         scoreGameHome += 1;
         document.getElementById("score-game-home").textContent = scoreGameHome;
-        clearAll()
-        
+        clearAll();
     }
     else if(scoreHome < scoreGuest){
         scoreGameGuest += 1;
         document.getElementById("score-game-guest").textContent = scoreGameGuest;
-        clearAll()
-        window.alert("GUEST WINS!")
+        clearAll();
+        window.alert("GUEST WINS!");
     }
     else {
-        window.alert("It is a tie!")
-        clearAll()
+        window.alert("It is a tie!");
+        clearAll();
     }
+}
+
+function clearHistory() {
+    scoreGameHome = 0;
+    document.getElementById("score-game-home").textContent = scoreGameHome;
+    scoreGameGuest = 0;
+    document.getElementById("score-game-guest").textContent = scoreGameGuest;
 }

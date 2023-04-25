@@ -40,15 +40,21 @@
             </div>
             <div id="score-history">
                 <div>
-                    <h1 class="team">HISTORY</h1>
+                    <h1 class="team-history-container">HISTORY</h1>
                 </div>
-                <div>
-                    <span class="team">HOME</span>
-                    <span id="score-game-home">0</span> X <span id="score-game-guest">0</span>
-                    <span class="team">GUEST</span>
+                <div class="flex">
+                    <div class="team-history">
+                        <h3 class="width right">HOME</h3>
+                    </div>
+                    <div class="flex">
+                        <p id="score-game-home">0</p><p id="score-game-guest">0</p>
+                    </div>
+                    <div class="team-history">
+                        <h3 class="width left">GUEST</h3>
+                    </div>
                 </div>
-                <div>
-                    <button class="history-btn" onclick="clearAll()">CLEAR ALL</button>
+                <div class="flex">
+                    <button class="history-btn" onclick="clearHistory()">CLEAR HISTORY</button>
                 </div>
             </div>
         </div>
